@@ -2,6 +2,7 @@
 <html>
   <head>
    <title>Calculator</title>
+    <meta name="viewport" content="width-device-width", initial-scale=1.0>
    <style>
     body {
       background-color: rgb(111, 111, 232);
@@ -9,6 +10,39 @@
       justify-content: center;
       align-items:center;
       margin-top: 90px;
+
+        @media (max-width : 768px) {
+        .calculator-container {
+          width: 90%;
+          height: auto;
+        }
+        .text {
+          width: 100%;
+          font-size: 24px;
+        }
+        button {
+          font-size: 14px;
+          height: 45px;
+          width: 50px;
+        }
+      }
+      @media (max-width: 480px) {
+        .calculator-container {
+          width: 95%;
+          height: auto;
+        }
+        .text {
+          font-size: 20px;
+        }
+        button {
+          font-size: 12px;
+          height: 40px;
+          width: 45px;
+        }
+        .row {
+          grid-template-columns: repeat(4,1fr);
+        }
+      }
     }
    </style>
   </head>
